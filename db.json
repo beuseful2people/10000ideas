@@ -1,0 +1,20 @@
+{
+  "ideas": [
+    { "id": 1, "title": "AI-Powered Personal Assistant", "description": "A personal assistant that learns from your habits.", "imageUrl": "https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "categoryId": 1, "tags": ["ai", "productivity"], "likes": 0, "comments": [] },
+    { "id": 2, "title": "Sustainable Vertical Farming", "description": "A system for growing crops in urban areas.", "imageUrl": "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e4a?q=80&w=1&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "categoryId": 2, "tags": ["green", "urban farming"], "likes": 0, "comments": [] },
+    { "id": 3, "title": "Decentralized Social Network", "description": "A social network that gives users control over their data.", "imageUrl": "https://images.unsplash.com/photo-1687892542731-36837939361b?q=80&w=1&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "categoryId": 3, "tags": ["web3", "privacy"], "likes": 0, "comments": [] },
+    { "id": 4, "title": "3D Printed Custom Prosthetics", "description": "Affordable and customizable prosthetics for everyone.", "imageUrl": "https://images.unsplash.com/photo-1579625481430-69a47a69594e?q=80&w=1&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "categoryId": 4, "tags": ["3d printing", "medical"], "likes": 0, "comments": [] },
+    { "id": 5, "title": "Gamified Language Learning App", "description": "Learn a new language by playing games.", "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "categoryId": 5, "tags": ["learning", "gamification"], "likes": 0, "comments": [] },
+    { "id": 6, "title": "Personalized Nutrition Planner", "description": "An app that creates meal plans based on your DNA.", "imageUrl": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "categoryId": 4, "tags": ["health", "nutrition", "ai"], "likes": 0, "comments": [] },
+    { "id": 7, "title": "Smart Waste Management System", "description": "IoT sensors in bins to optimize collection routes.", "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a5b190?q=80&w=1&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "categoryId": 2, "tags": ["iot", "smart city", "sustainability"], "likes": 0, "comments": [] },
+    { "id": 8, "title": "Virtual Reality Travel Experiences", "description": "Explore the world from the comfort of your home.", "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "categoryId": 6, "tags": ["vr", "travel", "entertainment"], "likes": 0, "comments": [] }
+  ],
+  "categories": [
+    { "id": 1, "name": "AI" },
+    { "id": 2, "name": "Sustainability" },
+    { "id": 3, "name": "Blockchain" },
+    { "id": 4, "name": "Healthcare" },
+    { "id": 5, "name": "Education" },
+    { "id": 6, "name": "Entertainment" }
+  ]
+}
