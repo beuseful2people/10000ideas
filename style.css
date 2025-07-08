@@ -1,0 +1,389 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+#search-bar, #category-filter {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(236px, 1fr));
+    gap: 16px;
+}
+
+.grid-item {
+    margin-bottom: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    display: block;
+}
+
+.grid-item-content {
+    padding: 15px;
+}
+
+.grid-item-content h3 {
+    margin: 0 0 10px;
+}
+
+.grid-item-content p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.grid-item-content .category {
+    font-size: 12px;
+    font-weight: bold;
+    color: #007bff;
+}
+#add-idea-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.grid-item-content h3 {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#add-idea-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#add-idea-form input,
+#add-idea-form textarea,
+#add-idea-form select,
+#add-idea-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-idea-form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.grid-item:hover .delete-btn {
+    opacity: 1;
+}
+.edit-btn {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    background: rgba(0,0,0,0.5);
+    color: #ffd600;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.grid-item:hover .edit-btn {
+    opacity: 1;
+}
+.tags {
+    margin-bottom: 10px;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+#toast {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2ecc71;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s;
+}
+.like-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: color 0.2s;
+}
+.like-btn:hover {
+    color: #c0392b;
+}
+
+#idea-details-modal .modal-content {
+    max-width: 700px;
+}
+
+#idea-details-content {
+    margin-bottom: 20px;
+}
+
+#comments-section h3 {
+    margin-top: 0;
+}
+
+#comments-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.comment {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+body.dark-mode #comments-list {
+    border-top-color: #3a3b3c;
+}
+
+body.dark-mode .comment {
+    border-bottom-color: #3a3b3c;
+}
+
+#add-comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-comment-form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+#confirm-delete-modal .modal-content {
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#confirm-delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#cancel-delete-btn {
+    background-color: #bdc3c7;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f2f5;
+}
+
+body.dark-mode header {
+    background-color: #242526;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .grid-item {
+    background-color: #242526;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .grid-item-content p {
+    color: #b0b3b8;
+}
+
+body.dark-mode #search-bar,
+body.dark-mode #category-filter,
+body.dark-mode #add-idea-form input,
+body.dark-mode #add-idea-form textarea,
+body.dark-mode #add-idea-form select {
+    background-color: #3a3b3c;
+    border-color: #3a3b3c;
+    color: #f0f2f5;
+}
+
+body.dark-mode .modal-content {
+    background-color: #242526;
+}
